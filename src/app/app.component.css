@@ -1,0 +1,62 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.example-container>* {
+    width: 100%;
+}
+
+.cardclass {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 10%;
+}
+
+.cardclass1 {
+    padding: 5%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+    padding-right: 2%;
+}
+
+li span {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    background-color: #808080;
+}
+
+.errorhandle {
+    color: red;
+    font-size: 50%
+}
+
+.currentElement {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    background-color: green;
+}
+
+.lastElement {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    background-color: rgb(247, 84, 8);
+}

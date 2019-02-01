@@ -1,0 +1,28 @@
+<div class="cardclass">
+    <mat-card class="cardclass1">
+        <div class="example-container">
+            <span class="errorhandle" *ngIf="isValid">Use Comma seperated Numbers.</span>
+            <span class="errorhandle" *ngIf="isDuplicate">Array has duplicates.</span>
+            <span class="errorhandle" *ngIf="notFound">Current Element Not Found.</span>
+            <mat-form-field>
+                <input [(ngModel)]="arraystring" matInput placeholder="Enter array elements with comma separator.">
+            </mat-form-field>
+            <mat-form-field>
+                <input [(ngModel)]="currentItem" matInput placeholder="Enter Current Element.">
+            </mat-form-field>
+            <mat-form-field>
+                <input [(ngModel)]="positionShift" matInput placeholder="Enter Increment or Decrement.">
+            </mat-form-field>
+            <div class="buttondiv">
+                <button type="submit" (click)="processData()" mat-raised-button style="float: right;" color="primary">Process</button>
+            </div>
+            <ul>
+                <li *ngFor="let item of arrayItems; let i = index"><span [style.background-color]=" (i == resultPosition && resultPosition == currentPosition)?'pink':(i == resultPosition) ? 'red' :((i == currentPosition) ? 'green':'#808080')"> {{ item }} </span> </li>
+
+            </ul>
+        </div>
+    </mat-card>
+</div>
+
+
+<router-outlet></router-outlet>
